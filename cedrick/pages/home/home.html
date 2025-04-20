@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Car Dealer</title>
+  <link rel="stylesheet" href="./home.css">
+  <link rel="stylesheet" href="/stylesheet/header.css">
+
+</head>
+
+
+<body>
+
+
+<!-- header box -->
+  <nav>
+<div class="trapezoid-shape">
+ <pre>
+  
+  
+          Ced's 
+          Garage</pre>
+</div>
+    <ul>
+<li><a href="/pages/home/home.html">Home</a></li>
+<li><a href="/pages/contacts/contact.html">Contact</a></li>
+<li><a href="/pages/about/about.html">About Us</a></li>
+<li><a href="/pages/products/products.html">Products</a></li>
+<li><a href="/pages/news/news.html">News</a></li>
+    </ul>
+  </nav>
+
+
+
+<!-- body box -->
+
+  <div class="container">
+    <div class="content-container">
+      <h1>Car Show Forum</h1>
+      <p>Explore the Beauty of Cars</p>
+    </div>
+  
+    <a  class="bottom-center-link" href="/pages/products/products.html">Explore Our Cars</a>
+  </div>
+  
+  
+</body>
+
+
+
+</html>
+<script>
+  const container = document.querySelector(".container");
+  const images = [
+    "/images/camaro.avif",
+    "/images/nissan.jpg",
+    "/images/mustang.jpg",
+    "/images/dodge.jpg",
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+
+    // Create a temporary clone for fade effect
+    const clone = container.cloneNode(true);
+    clone.style.backgroundImage = `url(${images[index]})`;
+    clone.style.position = "absolute";
+    clone.style.top = "0";
+    clone.style.left = "0";
+    clone.style.zIndex = "0";
+    clone.style.opacity = "0";
+    clone.style.transition = "opacity 1s ease-in-out";
+
+    container.parentNode.appendChild(clone);
+
+    requestAnimationFrame(() => {
+      clone.style.opacity = "1";
+    });
+
+    setTimeout(() => {
+      container.style.backgroundImage = `url(${images[index]})`;
+      clone.remove();
+    }, 1000); // match transition duration
+  }, 5000);
+</script>

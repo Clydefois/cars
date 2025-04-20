@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Car Dealer</title>
+  <link rel="stylesheet" href="/pages/contacts/contact.css">
+  <link rel="stylesheet" href="/stylesheet/header.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="/pages/home/home.html">Home</a></li>
+      <li><a href="/pages/contacts/contact.html">Contact</a></li>
+      <li><a href="/pages/about/about.html">About Us</a></li>
+      <li><a href="/pages/products/products.html">Products</a></li>
+      <li><a href="/pages/news/news.html">News</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+  <section class="contact-wrapper">
+    <!-- Left Box with Contact Info -->
+    <div class="left-box">
+      <h2>Contact Information</h2>
+      <p>Email: <a href="mailto:contact@cardealer.com">contact@cardealer.com</a></p>
+      <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+      <p>Address: 123 Car Dealer St, City, Country</p>
+    </div>
+
+    <!-- Right Box with Contact Form -->
+    <div class="right-box">
+      <h2>Send Us a Message</h2>
+      <form action="/submit" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  </div>
+</body>
+
+</html>

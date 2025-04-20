@@ -1,0 +1,127 @@
+/* Prevent body from scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: Figtree, sans-serif;
+}
+
+/* Background Container */
+.container {
+  background: url(/images/dodge.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  /* Align from top */
+  justify-content: center;
+  padding: 20px;
+  padding-top: 65px;
+  /* space on top */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Wrapper */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+/* Left Box */
+.left-box {
+  flex: 1;
+  min-width: 150px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.left-box h2 {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.left-box p {
+  font-size: 11px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.left-box a {
+  color: #077A7D;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.left-box a:hover {
+  text-decoration: underline;
+}
+
+/* Right Box */
+.right-box {
+  flex: 1;
+  min-width: 150px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.right-box h2 {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.right-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.right-box label {
+  font-size: 11px;
+  color: #333;
+}
+
+.right-box input,
+.right-box textarea {
+  padding: 6px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.right-box textarea {
+  min-height: 50px;
+  resize: none;
+}
+
+.right-box button {
+  background-color: #077A7D;
+  color: white;
+  border: none;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.right-box button:hover {
+  background-color: #065a56;
+}

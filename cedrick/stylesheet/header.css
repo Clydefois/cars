@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+/* === Navigation === */
+nav {
+  background-color: rgba(11, 10, 10, 0.65);
+  position: fixed;
+  top: 15px;
+  width: 100%;
+  height: 35px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+
+  backdrop-filter: blur(6px);
+  /* optional for glass effect */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+
+}
+
+nav ul li a {
+  font-family: 'Figtree', sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 1px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: #077A7D;
+  background-color: rgba(242, 239, 231, 0.2);
+  transform: scale(1.05);
+  cursor: pointer;
+}
